@@ -1,28 +1,5 @@
-# Here are two examples of SQL queries using Common Table Expressions (CTE)
+Here is an example of an SQL queries using Common Table Expressions (CTE)
 
-## Example 1:
-WITH average_cte AS
-(
-SELECT A.customer_id,
-	A.first_name, 
-	A.last_name,
-	country,
-	city, 
-	SUM(amount) as total_amount_paid 
-FROM customer A
-INNER JOIN address B ON A.address_id = B.address_id 
-INNER JOIN city C ON B.city_id = C.city_id 
-INNER JOIN country D ON C.country_ID = D.country_ID 
-INNER JOIN payment E ON E.customer_id = A.customer_id 
-WHERE city IN ( 'Aurora', 'Tokat', 'Tarsus', 'Atlixco', 'Emeishan', 'Pontianak', 'Shimoga', 'Aparecida de Goinia', 'Zalantun', 'Taguig' ) 
-GROUP BY A.customer_id,A.first_name, A.last_name,country,city 
-ORDER BY SUM(amount) DESC 
-LIMIT 5
-) 
-SELECT ROUND( AVG (total_amount_paid), 2) AS average_amount_paid
-FROM average_cte;
-
-## Example 2:
 WITH custumers_country_cte AS
 (
 SELECT A.customer_id,
