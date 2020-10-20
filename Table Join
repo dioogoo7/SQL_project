@@ -1,0 +1,15 @@
+Here is an example of an SQL query containing an inner join:
+
+SELECT B.customer_id, 
+	   B.first_name, 
+	   B.last_name,
+	   D.city,
+	   SUM(A.amount) AS total_amount_paid
+FROM payment A
+INNER JOIN customer B ON A.customer_id = B.customer_id
+INNER JOIN address C ON B.address_id = C.address_id
+INNER JOIN city D ON C.city_id = D.city_id
+WHERE city IN ('Aurora', 'Tokat', 'Tarsus', 'Atlixco', 'Emeishan', 'Pontianak', 'Shimoga', 'Aparecida de Goinia', 'Zalantun', 'Taguig')
+GROUP BY B.customer_id, D.city
+ORDER BY SUM(amount) DESC
+LIMIT 5;
