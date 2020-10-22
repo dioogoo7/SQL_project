@@ -1,4 +1,4 @@
-I used this SQL to chack the film table for dirty data, specifically non-uniform or duplicate data, or missing values: 
+I used this SQL to check the film table duplicates: 
 SELECT title, 
 	   release_year,
 	   language_id,
