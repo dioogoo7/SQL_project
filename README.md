@@ -11,5 +11,5 @@ Rockbuster Stealth LLC is a movie rental company that used to have stores around
 * Where are customers with a high lifetime value based?
 * Do sales figures vary between geographic regions?
 
-[Link to Tableau Presentation](https://github.com/dioogoo7/SQL_skills/blob/main/Rockbuster%20presentation_Final_July20.pdf)
+[Link to Tableau Presentation](https://github.com/dioogoo7/SQL_skills/blob/main/Rockbuster%20presentation_Final_July20.pdf)  
 [Link to data dictionary](https://github.com/dioogoo7/SQL_skills/blob/main/Rockbuster%20Data%20Dictionary.pdf)
