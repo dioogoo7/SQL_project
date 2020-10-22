@@ -1,0 +1,14 @@
+I used this SQL to chack the film table for dirty data, specifically non-uniform or duplicate data, or missing values: 
+SELECT title, 
+	   release_year,
+	   language_id,
+	   rental_duration,
+	   rental_rate,
+	   count(*)
+FROM film
+GROUP BY title, 
+	   release_year,
+		 language_id,
+		 rental_duration,
+		 rental_rate
+HAVING COUNT (*) >1;
