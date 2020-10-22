@@ -1,4 +1,4 @@
-I used this SQL to check the film table duplicates: 
+I used this SQL query to check the film table for duplicates: 
 SELECT title, 
 	   release_year,
 	   language_id,
