@@ -1,0 +1,9 @@
+Here is an example of a SQL query where data is filtered:
+SELECT COUNT (film_id) AS Count_of_the_movies, 
+   AVG (rental_rate) AS average_movie_rental_rate,
+   MAX (rental_duration) AS maximum_rental_duration,
+   MIN (rental_duration) AS minimum_rental_duration,
+   rating
+FROM film
+GROUP BY rating, replacement_cost
+HAVING replacement_cost < 14.99;
