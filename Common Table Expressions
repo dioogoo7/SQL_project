@@ -1,4 +1,4 @@
-Here is an example of an SQL queries using Common Table Expressions (CTE)
+I wrote this SQL query containing a Common Table Expressions (CTE) to find out how many of the top 5 customers are based within each country:
 
 WITH custumers_country_cte AS
 (
