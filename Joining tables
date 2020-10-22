@@ -1,0 +1,22 @@
+I wrote this SQL query containing a inner join to find the top 5 customers in the top 10 cities who have paid the highest total amounts to Rockbuster:
+
+SELECT D.customer_id, D.first_name, D.last_name, A.country, B.city, SUM(F.amount) AS total_amount_paid
+FROM country A 
+	INNER JOIN city B ON A.country_id = B.country_id
+	INNER JOIN address C ON B.city_id = C.city_id
+	INNER JOIN customer D ON C.address_id = D.address_id
+	INNER JOIN rental E ON D.customer_id = E.customer_id
+	INNER JOIN payment F ON E.customer_id = F.customer_id
+WHERE city = 'Aurora'
+	OR city = 'Atlixco' 
+	OR city = 'Xintai' 
+	OR city = 'Adoni' 
+	OR city = 'Dhule (Dhulia)'
+	OR city = 'Kurashiki'
+	OR city = 'Pingxiang'
+	OR city = 'Sivas'
+	OR city = 'Celaya'
+	OR city = 'So Leopoldo'
+GROUP BY D.customer_id, D.first_name, D.last_name, A.country, B.city, F.amount
+ORDER BY SUM(F.amount) DESC
+LIMIT 5;
