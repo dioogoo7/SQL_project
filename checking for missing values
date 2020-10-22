@@ -1,0 +1,16 @@
+I have created this SQL query to check for missing values in the film table:
+SELECT *
+FROM film
+WHERE film_id IS NULL OR
+	title IS NULL OR
+	description IS NULL OR
+	release_year IS NULL OR
+	language_id IS NULL OR
+	rental_duration IS NULL OR
+	rental_rate IS NULL OR
+	length IS NULL OR
+	replacement_cost IS NULL OR
+	rating IS NULL OR
+	last_update IS NULL OR
+	special_features IS NULL OR
+	fulltext IS NULL;
